@@ -42,7 +42,14 @@ docker run --rm -it -v $PWD:/app -u $(id -u):$(id -g) composer:2.8.0 composer in
 
 ## Run the container
 
+Is important to run the container dowloand the next files:
+
+1. .env
+2. .key of storage
+
 ```bash
+cd /Users/my-user/Desktop/git/repository
+
 docker run --rm -it -v $PWD:/var/www/html -p 8000:8000 <docker-image> php artisan serve --host=0.0.0.0 --port=8000
 
 # Recommended to use the image created above
