@@ -26,3 +26,9 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
 # Configurar directorio de trabajo
 WORKDIR /var/www/html
 ```
+
+Create the image with the following command:
+
+```bash
+docker build -t my-php-gp .
+```
