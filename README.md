@@ -1,6 +1,6 @@
 # README
 
-Create the dockerfile such as "image.dockerfile" with the following content:
+Create the dockerfile such as "dockerfile" with the following content:
 
 ```bash
 FROM php:8.3
