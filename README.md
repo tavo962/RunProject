@@ -32,3 +32,10 @@ Create the image with the following command:
 ```bash
 docker build -t my-php-gp .
 ```
+
+## Change to working directory
+
+```bash
+cd /Users/my-user/Desktop/git/repository
+docker run --rm -it -v $PWD:/app -u $(id -u):$(id -g) composer:2.8.0 composer install
+```
