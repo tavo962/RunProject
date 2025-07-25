@@ -39,3 +39,12 @@ docker build -t my-php-gp .
 cd /Users/my-user/Desktop/git/repository
 docker run --rm -it -v $PWD:/app -u $(id -u):$(id -g) composer:2.8.0 composer install
 ```
+
+## Run the container
+
+```bash
+docker run --rm -it -v $PWD:/var/www/html -p 8000:8000 <docker-image> php artisan serve --host=0.0.0.0 --port=8000
+
+# Recommended to use the image created above
+docker run --rm -it -v $PWD:/var/www/html -p 8000:8000 my-php-gp php artisan serve --host=0.0.0.0 --port=8000
+```
